@@ -1,17 +1,23 @@
 import React from 'react';
 import { HeaderWrapper, HeaderLogo, HeaderNav, HeaderProfile, HaderProfileImage } from './Header.styles';
+import {
+	BrowserRouter,
+	Link
+} from 'react-router-dom';
 
 const Header = () => {
 	return (
 		<HeaderWrapper>
-			<HeaderLogo src="/images/logo.svg" />
+			<Link to="/" >
+				<HeaderLogo src="/images/logo.svg" />
+			</Link>
 			<HeaderNav>
-				<a href="#" > <img src="/images/home-solid.svg" alt="home" /> <span>home</span> </a>
-				<a href="#" > <img src="/images/search-solid.svg" alt="home" /> <span>search</span> </a>
-				<a href="#" > <img src="/images/plus-solid.svg" alt="home" /> <span>watchlist</span> </a>
-				<a href="#" > <img src="/images/star-solid.svg" alt="home" /> <span>originals</span> </a>
-				<a href="#" > <img src="/images/film-solid.svg" alt="home" /> <span>movies</span> </a>
-				<a href="#" > <img src="/images/series-solid.svg" alt="home" /> <span>series</span> </a>
+				<Link to="/" > <img src="/images/home-solid.svg" alt="home" /> <span>home</span> </Link>
+				<Link to="/" > <img src="/images/search-solid.svg" alt="home" /> <span>search</span> </Link>
+				<Link to="/" > <img src="/images/plus-solid.svg" alt="home" /> <span>watchlist</span> </Link>
+				<Link to="/" > <img src="/images/star-solid.svg" alt="home" /> <span>originals</span> </Link>
+				<Link to="/" > <img src="/images/film-solid.svg" alt="home" /> <span>movies</span> </Link>
+				<Link to="/" > <img src="/images/series-solid.svg" alt="home" /> <span>series</span> </Link>
 			</HeaderNav>
 			<HeaderProfile href="#">
 				<HaderProfileImage src="/images/profile-pic.jpeg" alt="User's picture" />
