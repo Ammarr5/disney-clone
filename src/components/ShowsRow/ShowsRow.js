@@ -1,5 +1,9 @@
 import React from 'react';
 import { RowWrapper, RowSlider, Show as ShowStyled } from './ShowsRow.styles';
+import {
+	BrowserRouter,
+	Link
+} from 'react-router-dom';
 
 const Show = ({image, alt}) => {
 	return(
@@ -32,12 +36,24 @@ const ShowsRow = ({label}) => {
 		<RowWrapper>
 			<h2> {label} </h2>
 			<RowSlider {...settings} >
-				<Show image="images/shang-chi.jpg" alt="Shang Chi"/>
-				<Show image="images/shang-chi.jpg" alt="Shang Chi"/>
-				<Show image="images/shang-chi.jpg" alt="Shang Chi"/>
-				<Show image="images/shang-chi.jpg" alt="Shang Chi"/>
-				<Show image="images/shang-chi.jpg" alt="Shang Chi"/>
-				<Show image="images/shang-chi.jpg" alt="Shang Chi"/>
+				<Link to="/details">
+					<Show image="images/shang-chi.jpg" alt="Shang Chi"/>
+				</Link>
+				<Link to="/details">
+					<Show image="images/shang-chi.jpg" alt="Shang Chi"/>
+				</Link>
+				<Link to="/details">
+					<Show image="images/shang-chi.jpg" alt="Shang Chi"/>
+				</Link>
+				<Link to="/details">
+					<Show image="images/shang-chi.jpg" alt="Shang Chi"/>
+				</Link>
+				<Link to="/details">
+					<Show image="images/shang-chi.jpg" alt="Shang Chi"/>
+				</Link>
+				<Link to="/details">
+					<Show image="images/shang-chi.jpg" alt="Shang Chi"/>
+				</Link>
 			</RowSlider>
 		</RowWrapper>
 	)
