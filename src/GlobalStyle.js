@@ -19,5 +19,6 @@ export const GlobalStyle = createGlobalStyle`
 
 	body{
 		font-family: 'Noto Sans', sans-serif;
+		color: white;
 	}
 `;

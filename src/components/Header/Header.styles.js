@@ -2,11 +2,16 @@ import styled from 'styled-components'
 
 export const HeaderWrapper = styled.header`
 	background-color: var(--darkBlue);
-	/* height: 100px; */
+	width: 100%;
 	padding: .4rem 1rem;
 	color: white;
 	display: flex;
 	align-items: center;
+	position: fixed;
+	z-index: 50;
+	@media only screen and (max-width: 825px){
+		justify-content: space-between;
+	}
 `;
 
 export const HeaderLogo = styled.img`
@@ -42,7 +47,7 @@ export const HeaderNav = styled.nav`
 				transform: scaleX(0);
 				transform-origin: left center;
 				opacity: 0;
-				transition: all .2s cubic-bezier(.25,.45,.45,.75);
+				transition: all .25s cubic-bezier(.25,.45,.45,.75);
 			}
 			&:hover{
 				::before{
@@ -51,6 +56,9 @@ export const HeaderNav = styled.nav`
 				}
 			}
 		}
+	}
+	@media only screen and (max-width: 825px){
+		display: none;
 	}
 `;
 

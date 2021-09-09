@@ -10,8 +10,7 @@ const Carousel = () => {
 		infinite: true,
 		speed: 500,
 		arrows: true,
-		// slidesToShow: 1,
-		// slidesToScroll: 1
+		autoplay: true
 	}
 	return (
 		<CarouselWrapper {...settings}>
@@ -68,13 +67,12 @@ const CarouselWrapper = styled(Slider)`
 		border: 5px solid transparent;
 		box-shadow: rgb(0 0 0 / 69%) 0 30px 30px -10px, rgb(0 0 0 / 72%) 0 16px 10px -10px;
 		border-radius: 5px;
-		transition: border .2s;
+		transition: border .25s cubic-bezier(.25,.45,.45,.75);
 		cursor: pointer;
 		:hover{
 			border: 5px solid white;
 		}
 	}
 `;
-const SlideImage = styled.div`
 
-`;
+const SlideImage = styled.div``;

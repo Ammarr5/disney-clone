@@ -1,11 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 import Carousel from './Carousel/Carousel';
+import Categories from './Categories/Categories';
+import ShowsRow from './ShowsRow/ShowsRow';
 
 const Home = () => {
 	return (
 		<HomeWrapper>
 			<Carousel />
+			<Categories />
+			<ShowsRow label="Recommended for you" />
+			<ShowsRow label="New to disney+" />
+			<ShowsRow label="originals" />
+			<ShowsRow label="trending" />
 		</HomeWrapper>
 	)
 }
@@ -13,9 +20,11 @@ const Home = () => {
 export default Home;
 
 const HomeWrapper = styled.main`
+	
+	top: 72.8px;
 	min-height: calc(100vh - 72.8px);
+	padding: 1rem calc(3.5vw - 5px);
 	position: relative;
-	background-color: #171A1F;
 	overflow-x: hidden;
 	&:before{
 		content: '';
@@ -30,5 +39,6 @@ const HomeWrapper = styled.main`
 		right: 0;
 		width: 100%;
 		height: 100%;
+		z-index: -1;
 	}
 `;
