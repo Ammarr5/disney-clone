@@ -26,7 +26,7 @@ export const RowSlider = styled(Slider)`
 
 export const Show = styled.div`
 	width: 100%;
-	height: 10rem;
+	height: 20vh;
 	cursor: pointer;
 	border: 3px solid rgb(255 255 255 / .1);
 	border-radius: 10px;
@@ -34,6 +34,7 @@ export const Show = styled.div`
 	box-shadow: rgb(0 0 0 / 69%) 0 30px 30px -10px, rgb(0 0 0 / 72%) 0 16px 10px -10px;
 	transition: all .25s cubic-bezier(.25,.45,.45,.75);
 	img{
+		height: 100%;
 		width: 100%;
 		object-fit: cover;
 	}

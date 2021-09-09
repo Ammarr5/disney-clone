@@ -18,6 +18,15 @@ const ShowsRow = ({label}) => {
 		// centerPadding: '10rem',
 		slidesToShow: 4,
 		slidesPerPage: 4,
+		responsive:[
+			{
+				breakpoint: 750,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 3
+				}
+			}
+		]
 	}
 	return (
 		<RowWrapper>

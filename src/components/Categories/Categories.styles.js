@@ -28,6 +28,7 @@ export const CategorieItem = styled.div`
 		position: absolute;
 		inset: 0;
 		object-fit: cover;
+		height: 100%;
 	}
 	:hover{
 		transform: scale(1.05);
