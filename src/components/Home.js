@@ -1,18 +1,33 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import Carousel from './Carousel/Carousel';
 import Categories from './Categories/Categories';
 import ShowsRow from './ShowsRow/ShowsRow';
+import { updateMovies, selectMovies } from '../features/movies/moviesSlice';
+import { useDispatch } from 'react-redux';
+import db from '../firebase';
+import { useSelector } from 'react-redux';
 
 const Home = () => {
+	const dispatch = useDispatch();
+	const movies = useSelector(selectMovies);
+	console.log(movies)
+
+	useEffect( () => {
+		db.collection('movies').onSnapshot( snapshot => {
+			let movies = snapshot.docs.map( doc => ({...doc.data(), id: doc.id}) )
+			dispatch(updateMovies(movies));
+		} )
+	}, [dispatch] )
+
 	return (
 		<HomeWrapper>
 			<Carousel />
 			<Categories />
-			<ShowsRow label="Recommended for you" />
-			<ShowsRow label="New to disney+" />
-			<ShowsRow label="originals" />
-			<ShowsRow label="trending" />
+			<ShowsRow label="Recommended for you" movies={movies} />
+			<ShowsRow label="New to disney+" movies={movies} />
+			<ShowsRow label="originals" movies={movies} />
+			<ShowsRow label="trending" movies={movies} />
 		</HomeWrapper>
 	)
 }

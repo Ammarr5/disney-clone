@@ -34,7 +34,7 @@ const Details = () => {
 				2018 • 1h 58m • Science Fiction, Family, Animation, Action-Adventure
 				</p>
 				<p className="showDescription" >
-				While Helen is called on to lead a campaign to bring back the Supers, Bob navigates the day-to-day heroics of “normal” life at home with Violet, Dash and Jack-Jack, whose superpowers are about to be discovered. Their mission is derailed, however, when a new villain emerges with a brilliant and dangerous plot that threatens everything. But with Frozone by their side, the Parrs can take on anything.
+					Martial-arts master Shang-Chi confronts the past he thought he left behind when he's drawn into the web of the mysterious Ten Rings organization.
 				</p>
 			</DetailsContent>
 		</DetailsWrapper>
