@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const DetailsWrapper = styled.div`
 	min-height: calc(100vh - 72.8px);
-	background: linear-gradient(to right, #242638, #24263850), url('images/shang chi cover.jpg');
+	background: linear-gradient(to right, #242638, #24263850), url(${ ({posterImage}) => posterImage });
 	background-position: center;
 	background-size: cover;
 	position: relative;

@@ -1,7 +1,6 @@
 import React from 'react';
 import { HeaderWrapper, HeaderLogo, HeaderNav, HeaderProfile, HaderProfileImage } from './Header.styles';
 import {
-	BrowserRouter,
 	Link
 } from 'react-router-dom';
 

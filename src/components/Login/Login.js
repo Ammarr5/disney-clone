@@ -9,9 +9,9 @@ const Login = () => {
 				<CTAContent>
 					<img src="/images/bundle-logo.svg" alt="bundle" className="bundleLogo" />
 					<JoinButton> get the disney bundle </JoinButton>
-					<p>Stream now. <span> <a href="#">Terms apply.</a> </span> </p>
+					<p>Stream now. <span> <a href="/">Terms apply.</a> </span> </p>
 					<img src="/images/disney-franchise-logos.png" alt="franchise" className="franchise" />
-					<a href="#" className="disneyOnly" >Sign up for Disney+ only.</a>
+					<a href="/" className="disneyOnly" >Sign up for Disney+ only.</a>
 				</CTAContent>
 			</LoginHero>
 		</>

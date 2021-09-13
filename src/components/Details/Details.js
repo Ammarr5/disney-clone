@@ -1,19 +1,29 @@
-import React from 'react'
-import { 
-	DetailsWrapper, 
-	DetailsContent, 
+import React, {useState, useEffect} from 'react'
+import { useParams } from 'react-router'
+import {
+	DetailsWrapper,
+	DetailsContent,
 	ButtonsRow,
 	PlayButton,
 	TrailerButton,
 	AddButton,
 	GroupButton
 } from './Details.styles'
+import db from '../../firebase'
 
 const Details = () => {
+	const [movie, setMovie] = useState({});
+	const {id} = useParams();
+	useEffect( () => {
+		db.collection('movies').doc(id).get()
+		.then( (doc) => {
+			setMovie(doc.data())
+		} )
+	}, [id] )
 	return (
-		<DetailsWrapper>
+		<DetailsWrapper posterImage={movie.posterImage}>
 			<DetailsContent>
-				<img src="/images/shang chi logo.png" alt="Shang Chi Logo" />
+				<img src={movie?.logo} alt={`${movie.title} Logo`} />
 				<ButtonsRow>
 					<PlayButton>
 						<div className="imageContainer" ><img src="/images/play-solid-black.svg" alt="play" /></div>
@@ -31,10 +41,10 @@ const Details = () => {
 					</GroupButton>
 				</ButtonsRow>
 				<p className="subText" >
-				2018 • 1h 58m • Science Fiction, Family, Animation, Action-Adventure
+					{movie.metaData}
 				</p>
 				<p className="showDescription" >
-					Martial-arts master Shang-Chi confronts the past he thought he left behind when he's drawn into the web of the mysterious Ten Rings organization.
+					{movie.overview}
 				</p>
 			</DetailsContent>
 		</DetailsWrapper>

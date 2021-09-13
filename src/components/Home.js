@@ -7,6 +7,7 @@ import { updateMovies, selectMovies } from '../features/movies/moviesSlice';
 import { useDispatch } from 'react-redux';
 import db from '../firebase';
 import { useSelector } from 'react-redux';
+import bgImage from '../images/home-background.png'
 
 const Home = () => {
 	const dispatch = useDispatch();
@@ -21,7 +22,7 @@ const Home = () => {
 	}, [dispatch] )
 
 	return (
-		<HomeWrapper>
+		<HomeWrapper image={bgImage}>
 			<Carousel />
 			<Categories />
 			<ShowsRow label="Recommended for you" movies={movies} />
@@ -43,7 +44,7 @@ const HomeWrapper = styled.main`
 	overflow-x: hidden;
 	&:before{
 		content: '';
-		background-image: url('images/home-background.png');
+		background-image: url(${({image}) => image});
 		background-size: cover;
 		background-attachment: fixed;
 		background-position: center;
