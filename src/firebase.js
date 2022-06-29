@@ -1,13 +1,15 @@
 import firebase from 'firebase';
 
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-	apiKey: "AIzaSyCwPbnb-xBzNZhWLCAsbYOPfTXRER8WyS8",
-  authDomain: "disney-plus-clone-3e959.firebaseapp.com",
-  projectId: "disney-plus-clone-3e959",
-  storageBucket: "disney-plus-clone-3e959.appspot.com",
-  messagingSenderId: "498667851476",
-  appId: "1:498667851476:web:29910f496ffb634c57b541",
-  measurementId: "G-ZJSN2TRQSJ"
+  apiKey: "AIzaSyBQyyVP3frA_ZAKsga5BX-Mu6r-CAB17dc",
+  authDomain: "disney-plus-clone2.firebaseapp.com",
+  projectId: "disney-plus-clone2",
+  storageBucket: "disney-plus-clone2.appspot.com",
+  messagingSenderId: "62923930205",
+  appId: "1:62923930205:web:1b63e2e7f977e64ef66bb4",
+  measurementId: "G-J7PKDDTX2T"
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
